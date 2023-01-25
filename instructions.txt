@@ -1,0 +1,37 @@
+- Set up environment :
+Install Microsoft .net SDK
+
+- Command: 
+dotnet new list (see a list of available apps for more information)
+dotnet new sln (create Solution file)
+dotnet new webapi -n API (create web api app)
+dotnet watch run (run api)
+
+- Create Entity Framework
+ + Translate code into SQL commands to queries in database
+
+ - Create Entities folder for Entity
+
+ - Install NuGet Extension if you use VSC
+  + Use NuGet to install Microsoft.EntityFrameworkCore.Sqlite 
+
+- Create Data folder and DataContext inside
+ + Where we can use DbContext instance to query and save entities database
+ + Add DataContext in Program.cs to use database Sqlite
+
+ - Install dotnet -ef using NuGet website
+  + dotnet tool install --global dotnet-ef --version 7.0.2
+  + dotnet ef migrations add InitialCreate -o Data/Migrations
+   * Help generate code for DataContext and entity types for database 
+
+- Install SQLite Extension to view database
+
+- Create Api UsersController (query Users in database)
+ + [ApiController] - for MVC 
+ + [Route("api/[controller]")] - specify the link to the api
+ + Create API Endpoints [HttpGet] - GET api
+ + Turn synchronous code to asynchronous (able to make multiple requests)
+
+- Source Control
+ + Generate dev access token on Github API
+ + Create gitignore (dotnet new gitignore)
