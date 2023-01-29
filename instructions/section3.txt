@@ -1,0 +1,35 @@
+1. Using Angular CLI
+2. How to create a new Angular
+3. The Angular project files
+4. The Angular bootstrap process
+5. Using Angular HTTP client service
+6. Running Angular app over HTTPS
+7. How to add packages using NPM
+
+- Read documents about angular.io
+
+- Install angular: npm install -g @angular/cli@14 (global & version 14)
+- Check version of Angular (ng --version)
+- Create Angular project (ng new client)
+- Build Angular app (ng serve)
+
+- Make HTTP requests in Angular
+ + Import HttpClient in module
+ + Implements OnInit interface inside app.components to get api
+
+- Add Cors support in API
+ + add cors in builder services inside Program
+
+- app.component
+ + AppComponent implements OnInit interface to fetch GET api
+
+- Install framework for Angular
+ + npm install ngx-bootstrap
+ + npm install bootstrap@5
+ + npm install font-awesome
+
+- Add styles(css) to angular.json file
+
+- Using HTTPS in angular
+ + Add ssl cert to Mac use https
+ + Add ssl to serve options in angular.json
