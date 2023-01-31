@@ -1,0 +1,24 @@
+1. How to store passwords in Database
+2. Use inheritance in C# - DRY
+3. Use the C# debugger
+4. Use Data Transfer Objects (DTOs)
+5. Validation
+6. JSON Web Tokens (JWTs)
+7. Use services in C#
+8. Middleware
+9. Extension methods - DRY
+
+- dotnet watch --no-hot-reload (run api without hot reload)
+
+- Add variable PasswordHash and Salt
+ + dotnet ef migrations add UserPasswordAdded (cmd to generate migration for Passwords)
+ + dotnet ef database update (update database)
+
+- Code inheritance in UsersController to apply DRY
+
+- Create AccountController
+ + POST Api for username and passwords
+ + Create Register function to POST user
+  * Use hmac to salt passwords
+  * Hash PasswordSalt
+  * Add user to Users database
